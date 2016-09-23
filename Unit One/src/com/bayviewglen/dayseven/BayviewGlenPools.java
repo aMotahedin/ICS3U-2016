@@ -6,32 +6,34 @@ public class BayviewGlenPools {
 
 	public static void main(String[] args) {
 
-		Scanner number = new Scanner(System.in);
+		Scanner keyboard = new Scanner(System.in);
 
 		System.out.println("First, enter the length of the pool: ");
-		double length = number.nextDouble();
+		double length = keyboard.nextDouble();
 
 		System.out.println("Then, enter the width of the pool: ");
-		double width = number.nextDouble();
+		double width = keyboard.nextDouble();
 
 		System.out.println("Next, enter the depth of the deep end of the pool: ");
-		double deepDepth = number.nextDouble();
+		double deepDepth = keyboard.nextDouble();
 
 		System.out.println("Now, please enter the depth of the shallow end of the pool: ");
-		double shallowDepth = number.nextDouble();
+		double shallowDepth = keyboard.nextDouble();
 
 		System.out
 				.println("Please enter the length of the transition between the deep and shallow ends of the pool:  ");
-		double transitionHyp = number.nextDouble();
+		double transitionHyp = keyboard.nextDouble();
 
 		System.out.println("Then enter the length of the shallow end: ");
-		double shallowLength = number.nextDouble();
+		double shallowLength = keyboard.nextDouble();
 
 		System.out.println("Finally, enter the price of liner one, two and three: ");
-		double linerOne = number.nextDouble();
-		double linerTwo = number.nextDouble();
-		double linerThree = number.nextDouble();
+		double linerOne = keyboard.nextDouble();
+		double linerTwo = keyboard.nextDouble();
+		double linerThree = keyboard.nextDouble();
 
+		keyboard.close();
+		
 		// question one
 
 		double transitionHeight = deepDepth - shallowDepth;
@@ -50,11 +52,9 @@ public class BayviewGlenPools {
 		double transitionTriangleHeight = deepDepth - shallowDepth;
 		double transitionTriangleVolume = ((transitionTriangleHeight * transitionLength) * 0.5) * width;
 
-		double totalVolume = transitionTriangleVolume + middleVolume + deepVolume;
+		double totalVolume = transitionTriangleVolume + middleVolume + deepVolume + shallowVolume;
 
 		double water = totalVolume * 0.9;
-
-		double waterRounded = (int) (water * 100000) / 1000.0;
 
 		System.out.println("\t");
 		System.out.println("you will need " + water + " litres of water to fill the pool 90%");
