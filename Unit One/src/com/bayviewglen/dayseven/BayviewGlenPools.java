@@ -1,10 +1,13 @@
 package com.bayviewglen.dayseven;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BayviewGlenPools {
+private static DecimalFormat decform = new DecimalFormat (".##");
 
 	public static void main(String[] args) {
+		
 
 		Scanner keyboard = new Scanner(System.in);
 
@@ -52,12 +55,12 @@ public class BayviewGlenPools {
 		double transitionTriangleHeight = deepDepth - shallowDepth;
 		double transitionTriangleVolume = ((transitionTriangleHeight * transitionLength) * 0.5) * width;
 
-		double totalVolume = transitionTriangleVolume + middleVolume + deepVolume + shallowVolume;
+		double totalVolume = (transitionTriangleVolume + middleVolume + deepVolume + shallowVolume) * 1000;
 
 		double water = totalVolume * 0.9;
-
+		
 		System.out.println("\t");
-		System.out.println("you will need " + water + " litres of water to fill the pool 90%");
+		System.out.println("you will need " + decform.format(water) + " litres of water to fill the pool 90%");
 
 		// question two
 
@@ -75,7 +78,7 @@ public class BayviewGlenPools {
 
 
 		System.out.println("\t");
-		System.out.println(surfaceAreaTotal + " meters squared is needed to line this pool");
+		System.out.println(decform.format(surfaceAreaTotal) + " meters squared is needed to line this pool");
 
 		// question 3
 
@@ -84,9 +87,9 @@ public class BayviewGlenPools {
 		double linerThreeTotal = linerThree * surfaceAreaTotal;
 
 		System.out.println("\t");
-		System.out.println("price of liner one: $" + linerOneTotal);
-		System.out.println("price of liner two: $" + linerTwoTotal);
-		System.out.println("price of liner three: $" + linerThreeTotal);
+		System.out.println("price of liner one: $" + decform.format(linerOneTotal));
+		System.out.println("price of liner two: $" + decform.format(linerTwoTotal));
+		System.out.println("price of liner three: $" + decform.format(linerThreeTotal));
 
 	}
 
