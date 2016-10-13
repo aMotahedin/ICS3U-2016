@@ -220,7 +220,7 @@ public class CrossCountryAssignmentTwo {
 
 		///////////// chart/////////////
 
-		System.out.printf("%10s %30s %12s %12s %12s\n", "Full Name", "Mile One ", "Mile Two ", "Mile Three ",
+		System.out.printf("%20s %30s %12s %12s %12s\n", "Full Name", "Mile One ", "Mile Two ", "Mile Three ",
 				"Total Time");
 		System.out.println("");
 		System.out.printf("%20s %30s %5d:%06.3f %5d:%06.3f %12s\n", firstNameOne + lastNameOne, runnerOneMileOne,
