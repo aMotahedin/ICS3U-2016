@@ -239,7 +239,7 @@ public class CrossCountryAssignmentTwo {
 				runnerFiveMileTwoMinutes, runnerFiveMileTwoTotalSecconds, runnerFiveMileThreeMinutes,
 				runnerFiveMileThreeTotalSecconds, runnerFiveTotalTime);
 
-		keyboard.close(); 
+		keyboard.close();
 	}
 
 }
